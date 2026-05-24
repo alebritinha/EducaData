@@ -7,8 +7,8 @@ import { MateriaisComponent } from './pages/materiais/materiais';
 import { DetalhesMaterialComponent } from './pages/detalhes-material/detalhes-material';
 import { PerfilComponent } from './pages/perfil/perfil';
 import { QuestionariosComponent } from './pages/questionarios/questionarios';
-import { CriarQuestionarioComponent } from './criar-questionario/criar-questionario';
-
+import { CriarQuestionarioComponent } from './pages/criar-questionario/criar-questionario';
+import { IndicadoresComponent } from './pages/indicadores/indicadores';
 
 export const routes: Routes = [
 
@@ -47,6 +47,10 @@ export const routes: Routes = [
   {
     path: 'questionarios/criar',
     component: CriarQuestionarioComponent
+  },
+  {
+    path: 'indicadores',
+    component: IndicadoresComponent
   }
 
 ];
