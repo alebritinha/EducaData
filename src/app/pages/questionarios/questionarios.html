@@ -1,0 +1,508 @@
+<!-- resultados-questionario.html -->
+
+<div class="dashboard-container">
+
+  <!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <!-- TOPO SIDEBAR -->
+
+    <div>
+
+      <div class="sidebar-top">
+
+        <div class="logo-area">
+
+          <div class="logo-icon">
+          </div>
+
+          <div class="logo">
+            EducaData
+          </div>
+
+        </div>
+
+        <button class="menu-btn">
+          
+        </button>
+
+      </div>
+
+      <!-- MENU -->
+
+      <nav class="menu">
+
+        <!-- HOME -->
+
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          🏠 Home
+        </a>
+
+        <!-- MATERIAIS -->
+
+        <a
+          routerLink="/materiais"
+          routerLinkActive="active"
+        >
+          📚 Materiais
+        </a>
+
+        <!-- QUESTIONÁRIOS -->
+
+        <a
+          routerLink="/questionarios"
+          routerLinkActive="active"
+        >
+          📝 Questionários
+        </a>
+
+        <!-- INDICADORES -->
+
+        <a
+          routerLink="/indicadores"
+          routerLinkActive="active"
+        >
+          📊 Indicadores
+        </a>
+
+        <!-- RELATÓRIOS -->
+
+        <a
+          routerLink="/relatorios"
+          routerLinkActive="active"
+        >
+          📄 Relatórios
+        </a>
+
+        <!-- PERFIL -->
+
+        <a
+          routerLink="/perfil"
+          routerLinkActive="active"
+        >
+          👤 Perfil
+        </a>
+
+      </nav>
+
+    </div>
+
+    <!-- LOGOUT -->
+
+    <div class="logout">
+
+      <a routerLink="/">
+        Sair
+      </a>
+
+    </div>
+
+  </aside>
+  <!-- CONTENT -->
+
+  <main class="content">
+
+    <!-- TOPO -->
+
+    <div class="topo">
+
+      <button class="voltar">
+        ←
+      </button>
+
+      <div>
+
+        <h1>
+          Frações – Avaliação
+        </h1>
+
+        <p>
+          Resultados do questionário aplicado.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- RESUMO -->
+
+    <div class="resumo-cards">
+
+      <div class="card">
+
+        <p>Total de Respostas</p>
+
+        <h2>35</h2>
+
+      </div>
+
+      <div class="card">
+
+        <p>Perguntas Respondidas</p>
+
+        <h2>5</h2>
+
+      </div>
+
+      <div class="card">
+
+        <p>Participação</p>
+
+        <h2>92%</h2>
+
+      </div>
+
+    </div>
+
+    <!-- GRID DOS GRÁFICOS -->
+
+    <div class="graficos-grid">
+
+      <!-- GRÁFICO 1 -->
+
+      <div class="grafico-box">
+
+        <h2>
+          Pergunta 1 — Gostou da aula?
+        </h2>
+
+        <div class="grafico">
+
+          <!-- SIM -->
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Sim
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra sim"
+                style="width: 75%;"
+              >
+                75%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              26
+            </div>
+
+          </div>
+
+          <!-- MAIS OU MENOS -->
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Mais ou menos
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra medio"
+                style="width: 15%;"
+              >
+                15%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              5
+            </div>
+
+          </div>
+
+          <!-- NÃO -->
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Não
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra nao"
+                style="width: 10%;"
+              >
+                10%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              4
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- GRÁFICO 2 -->
+
+      <div class="grafico-box">
+
+        <h2>
+          Pergunta 2 — O material ajudou no entendimento?
+        </h2>
+
+        <div class="grafico">
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Sim
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra sim"
+                style="width: 82%;"
+              >
+                82%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              29
+            </div>
+
+          </div>
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Parcialmente
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra medio"
+                style="width: 12%;"
+              >
+                12%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              4
+            </div>
+
+          </div>
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Não
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra nao"
+                style="width: 6%;"
+              >
+                6%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              2
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- GRÁFICO 3 -->
+
+      <div class="grafico-box">
+
+        <h2>
+          Pergunta 3 — Você entendeu o conteúdo?
+        </h2>
+
+        <div class="grafico">
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Sim
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra sim"
+                style="width: 88%;"
+              >
+                88%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              31
+            </div>
+
+          </div>
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Mais ou menos
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra medio"
+                style="width: 8%;"
+              >
+                8%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              3
+            </div>
+
+          </div>
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Não
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra nao"
+                style="width: 4%;"
+              >
+                4%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              1
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- GRÁFICO 4 -->
+
+      <div class="grafico-box">
+
+        <h2>
+          Pergunta 4 — Gostaria de novas atividades?
+        </h2>
+
+        <div class="grafico">
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Sim
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra sim"
+                style="width: 90%;"
+              >
+                90%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              32
+            </div>
+
+          </div>
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Talvez
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra medio"
+                style="width: 7%;"
+              >
+                7%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              2
+            </div>
+
+          </div>
+
+          <div class="linha-grafico">
+
+            <div class="label">
+              Não
+            </div>
+
+            <div class="barra-area">
+
+              <div
+                class="barra nao"
+                style="width: 3%;"
+              >
+                3%
+              </div>
+
+            </div>
+
+            <div class="numero">
+              1
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
