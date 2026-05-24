@@ -1,0 +1,433 @@
+/* criar-questionario.component.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* REMOVE ROLAGEM */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.dashboard-container {
+
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #f5f6fa;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+
+  width: 240px;
+
+  background: #0f4aa3;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px 15px;
+}
+
+/* LOGO */
+
+.logo {
+
+  font-size: 32px;
+  font-weight: 700;
+
+  margin-bottom: 40px;
+}
+
+/* MENU */
+
+.menu {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.menu a {
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.menu .active,
+.menu a:hover {
+
+  background: #2f66e8;
+}
+
+/* LOGOUT */
+
+.logout {
+
+  padding: 14px;
+
+  font-size: 16px;
+}
+
+/* CONTENT */
+
+.content {
+
+  flex: 1;
+
+  background: white;
+
+  padding: 30px 40px;
+
+  overflow-y: auto;
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+/* TOPO */
+
+.topo {
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+/* BOTÃO VOLTAR */
+
+.voltar {
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #eef2f8;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.voltar:hover {
+
+  background: #dde5f3;
+}
+
+/* TITULO */
+
+.topo h1 {
+
+  font-size: 32px;
+
+  color: #1e2a44;
+}
+
+.topo p {
+
+  color: #7d8597;
+
+  font-size: 15px;
+}
+
+/* GRID */
+
+.form-grid {
+
+  display: grid;
+
+  grid-template-columns: 340px 520px;
+
+  gap: 28px;
+
+  align-items: start;
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+/* CAMPOS */
+
+.campo label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+
+  color: #1e2a44;
+
+  font-size: 15px;
+}
+
+/* INPUTS */
+
+input,
+select,
+textarea {
+
+  width: 100%;
+
+  border: 1px solid #d8dee9;
+
+  border-radius: 10px;
+
+  padding: 12px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.3s;
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* INPUT */
+
+input {
+
+  height: 46px;
+}
+
+/* TEXTAREA */
+
+textarea {
+
+  resize: none;
+}
+
+/* FOCUS */
+
+input:focus,
+select:focus,
+textarea:focus {
+
+  border-color: #2f66e8;
+
+  box-shadow: 0 0 0 3px rgba(47, 102, 232, 0.1);
+}
+
+/* PERGUNTAS */
+
+.perguntas-box {
+
+  width: 520px;
+
+  background: #f8fafc;
+
+  border-radius: 20px;
+
+  padding: 22px;
+
+  height: fit-content;
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* TOPO PERGUNTAS */
+
+.perguntas-topo {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+.perguntas-topo h2 {
+
+  color: #1e2a44;
+
+  font-size: 24px;
+}
+
+/* CARD PERGUNTA */
+
+.pergunta-card {
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+  margin-bottom: 16px;
+
+  border: 1px solid #e5e7eb;
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* RESPOSTAS */
+
+.respostas {
+
+  margin-top: 16px;
+}
+
+/* ITEM RESPOSTA */
+
+.resposta-item {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+/* INPUT RESPOSTA */
+
+.resposta-item input:first-child {
+
+  flex: 1;
+}
+
+/* INPUT NÚMERO */
+
+.resposta-item input:last-child {
+
+  width: 80px;
+}
+
+/* BOTÕES */
+
+.add-btn,
+.editar-btn,
+.salvar-btn,
+.excluir-btn {
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+/* ADD */
+
+.add-btn {
+
+  background: #2f66e8;
+  color: white;
+
+  padding: 10px 16px;
+
+  font-size: 14px;
+}
+
+.add-btn:hover {
+
+  background:#0f4aa3;
+}
+
+/* AÇÕES */
+
+.acoes-pergunta {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 16px;
+}
+
+/* EDITAR */
+
+.editar-btn {
+
+  background: #f59e0b;
+  color: white;
+
+  padding: 10px 14px;
+
+  font-size: 14px;
+}
+
+/* SALVAR */
+
+.salvar-btn {
+
+  background: #10b981;
+  color: white;
+
+  padding: 10px 14px;
+
+  font-size: 14px;
+}
+
+/* EXCLUIR */
+
+.excluir-btn {
+
+  background: #ef4444;
+  color: white;
+
+  padding: 10px 14px;
+
+  font-size: 14px;
+}
+
+/* HOVER */
+
+.editar-btn:hover {
+
+  background: #d97706;
+}
+
+.salvar-btn:hover {
+
+  background: #059669;
+}
+
+.excluir-btn:hover {
+
+  background: #dc2626;
+}
