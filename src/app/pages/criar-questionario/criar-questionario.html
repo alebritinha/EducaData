@@ -1,0 +1,311 @@
+<!-- questionarios.component.html -->
+
+<div class="dashboard-container">
+
+  <!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <!-- TOPO SIDEBAR -->
+
+    <div>
+
+      <div class="sidebar-top">
+
+        <div class="logo-area">
+
+          <div class="logo-icon">
+          </div>
+
+          <div class="logo">
+            EducaData
+          </div>
+
+        </div>
+
+        <button class="menu-btn">
+          
+        </button>
+
+      </div>
+
+      <!-- MENU -->
+
+      <nav class="menu">
+
+        <!-- HOME -->
+
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          🏠 Home
+        </a>
+
+        <!-- MATERIAIS -->
+
+        <a
+          routerLink="/materiais"
+          routerLinkActive="active"
+        >
+          📚 Materiais
+        </a>
+
+        <!-- QUESTIONÁRIOS -->
+
+        <a
+          routerLink="/questionarios"
+          routerLinkActive="active"
+        >
+          📝 Questionários
+        </a>
+
+        <!-- INDICADORES -->
+
+        <a
+          routerLink="/indicadores"
+          routerLinkActive="active"
+        >
+          📊 Indicadores
+        </a>
+
+        <!-- RELATÓRIOS -->
+
+        <a
+          routerLink="/relatorios"
+          routerLinkActive="active"
+        >
+          📄 Relatórios
+        </a>
+
+        <!-- PERFIL -->
+
+        <a
+          routerLink="/perfil"
+          routerLinkActive="active"
+        >
+          👤 Perfil
+        </a>
+
+      </nav>
+
+    </div>
+
+    <!-- LOGOUT -->
+
+    <div class="logout">
+
+      <a routerLink="/">
+        Sair
+      </a>
+
+    </div>
+
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- TOPO -->
+    <div class="topo">
+
+      <button class="voltar">
+        ←
+      </button>
+
+      <div>
+
+        <h1>Novo Questionário</h1>
+
+        <p>
+          Crie um novo questionário.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="form-grid">
+
+      <!-- ESQUERDA -->
+      <div class="formulario">
+
+        <!-- TITULO -->
+        <div class="campo">
+
+          <label>
+            Título do Questionário
+          </label>
+
+          <input
+            type="text"
+            placeholder="Ex: Frações - Avaliação"
+            [(ngModel)]="titulo"
+          />
+
+        </div>
+
+        <!-- DISCIPLINA -->
+        <div class="campo">
+
+          <label>
+            Disciplina
+          </label>
+
+          <select [(ngModel)]="disciplina">
+
+            <option value="">
+              Selecione
+            </option>
+
+            <option>Matemática</option>
+
+            <option>Português</option>
+
+            <option>Ciências</option>
+
+          </select>
+
+        </div>
+
+        <!-- DESCRIÇÃO -->
+        <div class="campo">
+
+          <label>
+            Descrição
+          </label>
+
+          <textarea
+            rows="4"
+            placeholder="Descreva o objetivo do questionário..."
+            [(ngModel)]="descricao"
+          ></textarea>
+
+        </div>
+
+      </div>
+
+      <!-- DIREITA -->
+      <div class="perguntas-box">
+
+        <div class="perguntas-topo">
+
+          <h2>Perguntas</h2>
+
+          <button
+            class="add-btn"
+            (click)="adicionarPergunta()"
+          >
+            + Nova Pergunta
+          </button>
+
+        </div>
+
+        <!-- LISTA -->
+        <div
+          class="pergunta-card"
+          *ngFor="let pergunta of perguntas; let i = index"
+        >
+
+          <!-- PERGUNTA -->
+          <div class="campo">
+
+            <label>
+              Pergunta
+            </label>
+
+            <textarea
+              rows="2"
+              [(ngModel)]="pergunta.texto"
+              placeholder="Digite a pergunta..."
+            ></textarea>
+
+          </div>
+
+          <!-- OPÇÕES -->
+          <div class="respostas">
+
+            <div class="resposta-item">
+
+              <input
+                type="text"
+                [(ngModel)]="pergunta.opcao1"
+                placeholder="Resposta 1"
+              />
+
+              <input
+                type="number"
+                [(ngModel)]="pergunta.valor1"
+                placeholder="Nº"
+              />
+
+            </div>
+
+            <div class="resposta-item">
+
+              <input
+                type="text"
+                [(ngModel)]="pergunta.opcao2"
+                placeholder="Resposta 2"
+              />
+
+              <input
+                type="number"
+                [(ngModel)]="pergunta.valor2"
+                placeholder="Nº"
+              />
+
+            </div>
+
+            <div class="resposta-item">
+
+              <input
+                type="text"
+                [(ngModel)]="pergunta.opcao3"
+                placeholder="Resposta 3"
+              />
+
+              <input
+                type="number"
+                [(ngModel)]="pergunta.valor3"
+                placeholder="Nº"
+              />
+
+            </div>
+
+          </div>
+
+          <!-- AÇÕES -->
+          <div class="acoes-pergunta">
+
+            <button
+              class="editar-btn"
+            >
+              Editar
+            </button>
+
+            <button
+              class="salvar-btn"
+            >
+              Salvar
+            </button>
+
+            <button
+              class="excluir-btn"
+              (click)="removerPergunta(i)"
+            >
+              Excluir
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
