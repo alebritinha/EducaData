@@ -3,56 +3,105 @@
 <div class="dashboard-container">
 
   <!-- SIDEBAR -->
-<aside class="sidebar">
+ <aside class="sidebar">
 
-  <div>
+    <!-- TOPO SIDEBAR -->
 
-    <div class="logo">
-      EducaData
+    <div>
+
+      <div class="sidebar-top">
+
+        <div class="logo-area">
+
+          <div class="logo-icon">
+          </div>
+
+          <div class="logo">
+            EducaData
+          </div>
+
+        </div>
+
+        <button class="menu-btn">
+          
+        </button>
+
+      </div>
+
+      <!-- MENU -->
+
+      <nav class="menu">
+
+        <!-- HOME -->
+
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          🏠 Home
+        </a>
+
+        <!-- MATERIAIS -->
+
+        <a
+          routerLink="/materiais"
+          routerLinkActive="active"
+        >
+          📚 Materiais
+        </a>
+
+        <!-- QUESTIONÁRIOS -->
+
+        <a
+          routerLink="/questionarios"
+          routerLinkActive="active"
+        >
+          📝 Questionários
+        </a>
+
+        <!-- INDICADORES -->
+
+        <a
+          routerLink="/indicadores"
+          routerLinkActive="active"
+        >
+          📊 Indicadores
+        </a>
+
+        <!-- RELATÓRIOS -->
+
+        <a
+          routerLink="/relatorios"
+          routerLinkActive="active"
+        >
+          📄 Relatórios
+        </a>
+
+        <!-- PERFIL -->
+
+        <a
+          routerLink="/perfil"
+          routerLinkActive="active"
+        >
+          👤 Perfil
+        </a>
+
+      </nav>
+
     </div>
 
-    <nav class="menu">
+    <!-- LOGOUT -->
 
-      <a routerLink="/home" routerLinkActive="active">
-        Home
+    <div class="logout">
+
+      <a routerLink="/">
+        Sair
       </a>
 
-      <a routerLink="/materiais" routerLinkActive="active">
-        Materiais
-      </a>
+    </div>
 
-      <a routerLink="/questionarios" routerLinkActive="active">
-        Questionários
-      </a>
-
-      <a routerLink="/indicadores" routerLinkActive="active">
-        Indicadores
-      </a>
-
-      <a routerLink="/relatorios" routerLinkActive="active">
-        Relatórios
-      </a>
-
-      <a routerLink="/perfil" routerLinkActive="active">
-        Perfil
-      </a>
-
-    </nav>
-
-  </div>
-
-  <div class="logout">
-
-    <a
-      routerLink="/"
-      style="color: white; text-decoration: none;"
-    >
-      Sair
-    </a>
-
-  </div>
-
-</aside>
+  </aside>
 
   <!-- CONTENT -->
   <main class="content">

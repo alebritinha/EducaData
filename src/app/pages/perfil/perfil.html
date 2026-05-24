@@ -1,0 +1,276 @@
+<!-- perfil.html -->
+
+<div class="dashboard-container">
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <!-- TOPO SIDEBAR -->
+
+    <div>
+
+      <div class="sidebar-top">
+
+        <div class="logo-area">
+
+          <div class="logo-icon">
+          </div>
+
+          <div class="logo">
+            EducaData
+          </div>
+
+        </div>
+
+        <button class="menu-btn">
+          
+        </button>
+
+      </div>
+
+      <!-- MENU -->
+
+      <nav class="menu">
+
+        <!-- HOME -->
+
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          🏠 Home
+        </a>
+
+        <!-- MATERIAIS -->
+
+        <a
+          routerLink="/materiais"
+          routerLinkActive="active"
+        >
+          📚 Materiais
+        </a>
+
+        <!-- QUESTIONÁRIOS -->
+
+        <a
+          routerLink="/questionarios"
+          routerLinkActive="active"
+        >
+          📝 Questionários
+        </a>
+
+        <!-- INDICADORES -->
+
+        <a
+          routerLink="/indicadores"
+          routerLinkActive="active"
+        >
+          📊 Indicadores
+        </a>
+
+        <!-- RELATÓRIOS -->
+
+        <a
+          routerLink="/relatorios"
+          routerLinkActive="active"
+        >
+          📄 Relatórios
+        </a>
+
+        <!-- PERFIL -->
+
+        <a
+          routerLink="/perfil"
+          routerLinkActive="active"
+        >
+          👤 Perfil
+        </a>
+
+      </nav>
+
+    </div>
+
+    <!-- LOGOUT -->
+
+    <div class="logout">
+
+      <a routerLink="/">
+        Sair
+      </a>
+
+    </div>
+
+  </aside>
+
+  <!-- CONTENT -->
+
+  <main class="content">
+
+    <!-- TOPO -->
+
+    <div class="header">
+
+      <div>
+
+        <h1>
+          Meu Perfil
+        </h1>
+
+        <p>
+          Gerencie suas informações pessoais.
+        </p>
+
+      </div>
+
+      <div class="header-icons">
+
+        <button class="icon-btn">
+          !
+        </button>
+
+        <button class="icon-btn">
+          💬
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PERFIL -->
+
+    <div class="perfil-grid">
+
+      <!-- CARD FOTO -->
+
+      <div class="foto-card">
+
+        <!-- INPUT FILE ESCONDIDO -->
+
+        <input
+          type="file"
+          #fileInput
+          accept="image/*"
+          (change)="onFileSelected($event)"
+          hidden
+        />
+
+        <!-- FOTO -->
+
+        <div class="foto-area">
+
+          <!-- MOSTRA FOTO -->
+
+          <img
+            *ngIf="fotoPreview"
+            [src]="fotoPreview"
+            alt="Foto Perfil"
+            class="foto-preview"
+          />
+
+          <!-- FOTO PADRÃO -->
+
+          <div
+            *ngIf="!fotoPreview"
+            class="foto-avatar"
+          >
+            👤
+          </div>
+
+        </div>
+
+        <!-- NOME -->
+
+        <h2>
+          {{ usuario.nome }}
+        </h2>
+
+        <!-- EMAIL -->
+
+        <p>
+          {{ usuario.email }}
+        </p>
+
+        <!-- BOTÃO FOTO -->
+
+        <button
+          class="foto-btn"
+          (click)="fileInput.click()"
+        >
+          Alterar Foto
+        </button>
+
+      </div>
+
+      <!-- FORM -->
+
+      <div class="perfil-form">
+
+        <!-- NOME -->
+
+        <div class="campo">
+
+          <label>
+            Nome Completo
+          </label>
+
+          <input
+            type="text"
+            [(ngModel)]="usuario.nome"
+          />
+
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="campo">
+
+          <label>
+            E-mail
+          </label>
+
+          <input
+            type="email"
+            [(ngModel)]="usuario.email"
+          />
+
+        </div>
+
+        <!-- SENHA -->
+
+        <div class="campo">
+
+          <label>
+            Senha
+          </label>
+
+          <button
+            class="senha-btn"
+            (click)="alterarSenha()"
+          >
+            Alterar Senha
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BOTÃO -->
+
+    <div class="footer-btn">
+
+      <button
+        class="salvar-btn"
+        (click)="salvarAlteracoes()"
+      >
+        Salvar Alterações
+      </button>
+
+    </div>
+
+  </main>
+
+</div>
