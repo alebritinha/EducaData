@@ -1,0 +1,269 @@
+<!-- materiais.html -->
+
+<div class="dashboard-container">
+
+  <!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div>
+
+    <div class="logo">
+      EducaData
+    </div>
+
+    <nav class="menu">
+
+      <a routerLink="/home" routerLinkActive="active">
+        Home
+      </a>
+
+      <a routerLink="/materiais" routerLinkActive="active">
+        Materiais
+      </a>
+
+      <a routerLink="/questionarios" routerLinkActive="active">
+        Questionários
+      </a>
+
+      <a routerLink="/indicadores" routerLinkActive="active">
+        Indicadores
+      </a>
+
+      <a routerLink="/relatorios" routerLinkActive="active">
+        Relatórios
+      </a>
+
+      <a routerLink="/perfil" routerLinkActive="active">
+        Perfil
+      </a>
+
+    </nav>
+
+  </div>
+
+  <div class="logout">
+
+    <a
+      routerLink="/"
+      style="color: white; text-decoration: none;"
+    >
+      Sair
+    </a>
+
+  </div>
+
+</aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- HEADER -->
+    <div class="header">
+
+      <div>
+
+        <h1>
+          Materiais Pedagógicos
+        </h1>
+
+        <p>
+          Gerencie seus materiais cadastrados.
+        </p>
+
+      </div>
+
+      <button
+        class="novo-btn"
+        (click)="abrirModal()"
+      >
+        + Novo Material
+      </button>
+
+    </div>
+
+    <!-- FILTROS -->
+    <div class="filters">
+
+      <input
+        type="text"
+        placeholder="Buscar material..."
+      />
+
+      <select>
+        <option>Todos os tipos</option>
+        <option>PDF</option>
+        <option>Vídeo</option>
+      </select>
+
+      <select>
+        <option>Todas as disciplinas</option>
+        <option>Matemática</option>
+        <option>Português</option>
+      </select>
+
+    </div>
+
+    <!-- TABELA -->
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Título</th>
+            <th>Disciplina</th>
+            <th>Tipo</th>
+            <th>Data</th>
+            <th>Ações</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr *ngFor="let material of materiais">
+
+            <!-- TÍTULO -->
+            <td class="titulo">
+
+              <span class="icon"></span>
+
+              {{ material.titulo }}
+
+            </td>
+
+            <!-- DISCIPLINA -->
+            <td>
+              {{ material.disciplina }}
+            </td>
+
+            <!-- TIPO -->
+            <td>
+              {{ material.tipo }}
+            </td>
+
+            <!-- DATA -->
+            <td>
+              {{ material.data }}
+            </td>
+
+            <!-- AÇÕES -->
+            <td class="acoes">
+
+              <!-- ABRIR -->
+              <button
+                class="abrir-btn"
+                [routerLink]="['/material', material.id]"
+              >
+                Abrir Material
+              </button>
+
+              <!-- EDITAR -->
+              <button
+                class="editar-btn"
+                (click)="editar(material)"
+              >
+                Editar
+              </button>
+
+              <!-- DELETAR -->
+              <button
+                class="deletar-btn"
+                (click)="deletar(material.id)"
+              >
+                Deletar
+              </button>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </main>
+
+</div>
+
+<!-- MODAL -->
+<div
+  class="modal-overlay"
+  *ngIf="modalAberto"
+>
+
+  <div class="modal">
+
+    <h2>
+      Novo Material
+    </h2>
+
+    <form (ngSubmit)="salvarMaterial()">
+
+      <!-- TÍTULO -->
+      <input
+        type="text"
+        placeholder="Título"
+        [(ngModel)]="novoMaterial.titulo"
+        name="titulo"
+        required
+      />
+
+      <!-- DISCIPLINA -->
+      <input
+        type="text"
+        placeholder="Disciplina"
+        [(ngModel)]="novoMaterial.disciplina"
+        name="disciplina"
+        required
+      />
+
+      <!-- TIPO -->
+      <select
+        [(ngModel)]="novoMaterial.tipo"
+        name="tipo"
+      >
+
+        <option value="PDF">
+          PDF
+        </option>
+
+        <option value="Vídeo">
+          Vídeo
+        </option>
+
+      </select>
+
+      <!-- UPLOAD -->
+      <input
+        type="file"
+        (change)="onFileSelected($event)"
+      />
+
+      <!-- BOTÕES -->
+      <div class="modal-actions">
+
+        <button
+          type="button"
+          class="cancelar"
+          (click)="fecharModal()"
+        >
+          Cancelar
+        </button>
+
+        <button type="submit">
+          Salvar
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
