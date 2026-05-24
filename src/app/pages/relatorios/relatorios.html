@@ -1,0 +1,152 @@
+<div class="layout">
+  <aside class="sidebar">
+
+    <!-- TOPO SIDEBAR -->
+
+    <div>
+
+      <div class="sidebar-top">
+
+        <div class="logo-area">
+
+          <div class="logo-icon">
+          </div>
+
+          <div class="logo">
+            EducaData
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- MENU -->
+
+      <nav class="menu">
+
+        <!-- HOME -->
+
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          🏠 Home
+        </a>
+
+        <!-- MATERIAIS -->
+
+        <a
+          routerLink="/materiais"
+          routerLinkActive="active"
+        >
+          📚 Materiais
+        </a>
+
+        <!-- QUESTIONÁRIOS -->
+
+        <a
+          routerLink="/questionarios"
+          routerLinkActive="active"
+        >
+          📝 Questionários
+        </a>
+
+        <!-- INDICADORES -->
+
+        <a
+          routerLink="/indicadores"
+          routerLinkActive="active"
+        >
+          📊 Indicadores
+        </a>
+
+        <!-- RELATÓRIOS -->
+
+        <a
+          routerLink="/relatorios"
+          routerLinkActive="active"
+        >
+          📄 Relatórios
+        </a>
+
+        <!-- PERFIL -->
+
+        <a
+          routerLink="/perfil"
+          routerLinkActive="active"
+        >
+          👤 Perfil
+        </a>
+
+      </nav>
+
+    </div>
+
+    <!-- LOGOUT -->
+
+    <div class="logout">
+
+      <a routerLink="/">
+        Sair
+      </a>
+
+    </div>
+
+  </aside>
+
+  <main class="content">
+    <header class="top">
+      <div>
+        <h1>Importar PDF</h1>
+        <p>Importe o PDF da aula de Frações e gere gráficos de feedback da turma.</p>
+      </div>
+
+      <button class="export-btn">Exportar</button>
+    </header>
+
+    <section class="upload-area">
+      <label for="pdfUpload" class="upload-box">
+        <div class="pdf-icon">PDF</div>
+
+        <strong>Selecionar arquivo PDF</strong>
+        <span>Envie o relatório de feedback da aula</span>
+
+        <input
+          id="pdfUpload"
+          type="file"
+          accept="application/pdf"
+          (change)="selecionarArquivo($event)"
+        />
+      </label>
+
+      <p class="file-name" *ngIf="arquivoSelecionado">
+        Arquivo selecionado: {{ arquivoSelecionado.name }}
+      </p>
+
+      <button class="generate-btn" (click)="gerarGrafico()">
+        Gerar Gráfico
+      </button>
+    </section>
+
+    <section class="chart-card" *ngIf="graficoGerado">
+      <h3>Gráficos gerados com base no PDF importado</h3>
+      <p>Aula de Matemática — Frações: Conceitos Básicos</p>
+
+      <div class="questions-grid">
+        <div class="question-card" *ngFor="let pergunta of dadosGrafico">
+          <h4>{{ pergunta.titulo }}</h4>
+          <p>{{ pergunta.pergunta }}</p>
+
+          <div class="bar-chart">
+            <div *ngFor="let item of pergunta.respostas">
+              <span [style.height.px]="item.valor * 6 > 150 ? 150 : item.valor * 6"></span>
+              <small>{{ item.opcao }}</small>
+              <strong>{{ item.valor }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

@@ -1,16 +1,98 @@
 <div class="layout">
   <aside class="sidebar">
-    <h2>EducaData</h2>
 
-    <nav>
-      <a>Home</a>
-      <a>Materiais</a>
-      <a>Questionários</a>
-      <a class="active">Indicadores</a>
-      <a>Perfil</a>
-    </nav>
+    <!-- TOPO SIDEBAR -->
 
-    <a class="logout">Sair</a>
+    <div>
+
+      <div class="sidebar-top">
+
+        <div class="logo-area">
+
+          <div class="logo-icon">
+          </div>
+
+          <div class="logo">
+            EducaData
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- MENU -->
+
+      <nav class="menu">
+
+        <!-- HOME -->
+
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          🏠 Home
+        </a>
+
+        <!-- MATERIAIS -->
+
+        <a
+          routerLink="/materiais"
+          routerLinkActive="active"
+        >
+          📚 Materiais
+        </a>
+
+        <!-- QUESTIONÁRIOS -->
+
+        <a
+          routerLink="/questionarios"
+          routerLinkActive="active"
+        >
+          📝 Questionários
+        </a>
+
+        <!-- INDICADORES -->
+
+        <a
+          routerLink="/indicadores"
+          routerLinkActive="active"
+        >
+          📊 Indicadores
+        </a>
+
+        <!-- RELATÓRIOS -->
+
+        <a
+          routerLink="/relatorios"
+          routerLinkActive="active"
+        >
+          📄 Relatórios
+        </a>
+
+        <!-- PERFIL -->
+
+        <a
+          routerLink="/perfil"
+          routerLinkActive="active"
+        >
+          👤 Perfil
+        </a>
+
+      </nav>
+
+    </div>
+
+    <!-- LOGOUT -->
+
+    <div class="logout">
+
+      <a routerLink="/">
+        Sair
+      </a>
+
+    </div>
+
   </aside>
 
   <main class="content">
