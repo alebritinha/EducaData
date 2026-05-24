@@ -1,0 +1,262 @@
+/* materiais.component.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background: #f4f6fb;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 240px;
+  background: #0f4aa3;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px 15px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 14px 16px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu .active {
+  background: #2f66e8;
+}
+
+.logout {
+  margin-top: auto;
+  padding: 15px;
+}
+
+/* CONTENT */
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 42px;
+  color: #1e2a44;
+}
+
+.header p {
+  color: #7d8597;
+  margin-top: 5px;
+}
+
+.novo-btn {
+  background: #2f66e8;
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 16px 28px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* FILTERS */
+
+.filters {
+  display: flex;
+  gap: 20px;
+  margin: 35px 0;
+}
+
+.filters input,
+.filters select {
+  height: 55px;
+  border: 1px solid #d8deea;
+  border-radius: 12px;
+  padding: 0 15px;
+  font-size: 16px;
+  background: white;
+}
+
+.filters input {
+  flex: 1;
+}
+
+/* TABLE */
+
+.table-container {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f7f8fc;
+}
+
+th,
+td {
+  padding: 22px;
+  text-align: left;
+}
+
+th {
+  color: #667085;
+}
+
+tbody tr {
+  border-top: 1px solid #eef1f6;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  background: #eacccc;
+  border-radius: 5px;
+}
+
+/* AÇÕES */
+
+.acoes {
+  display: flex;
+  gap: 10px;
+}
+.abrir-btn {
+
+  background: #10b981;
+  color: white;
+
+  border: none;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.editar-btn {
+  background: #2f66e8;
+  color: white;
+
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.deletar-btn {
+  background: #ef4444;
+  color: white;
+
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 500px;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+}
+
+.modal h2 {
+  margin-bottom: 25px;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal input,
+.modal select {
+  height: 55px;
+  border: 1px solid #d8deea;
+  border-radius: 12px;
+  padding: 0 15px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cancelar {
+  background: #d1d5db;
+}
