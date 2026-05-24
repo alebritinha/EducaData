@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login';
 import { CadastroComponent } from './pages/cadastro/cadastro';
 import { HomeComponent } from './pages/home/home';
 import { MateriaisComponent } from './pages/materiais/materiais';
+import { DetalhesMaterialComponent } from './pages/detalhes-material/detalhes-material';
 
 
 export const routes: Routes = [
@@ -26,5 +27,10 @@ export const routes: Routes = [
     path: 'materiais',
     component: MateriaisComponent
   },
+
+  {
+    path: 'material/:id',
+    component: DetalhesMaterialComponent
+  }
 
 ];
