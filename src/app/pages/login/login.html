@@ -1,0 +1,63 @@
+<!-- login.component.html -->
+<div class="login-container">
+
+  <!-- Lado esquerdo -->
+  <div class="left-panel">
+    <div class="logo-area">
+
+      <div class="logo-icon">
+        <img src="assets/logo_educadata.png" alt="EducaData Logo" />
+      </div>
+
+      <h1 class="logo-title">
+        <span class="blue">Educa</span><span class="green">Data</span>
+      </h1>
+
+      <p class="subtitle">— Gestão Pedagógica —</p>
+
+    </div>
+  </div>
+
+  <!-- Lado direito -->
+  <div class="right-panel">
+
+    <div class="form-container">
+
+      <h2>Bem-vindo de volta!</h2>
+
+      <p class="description">
+        Faça login para acessar sua conta
+      </p>
+
+      <form>
+
+        <div class="input-group">
+          <input
+            type="email"
+            placeholder="E-mail"
+          />
+        </div>
+
+        <div class="input-group">
+          <input
+            type="password"
+            placeholder="Senha"
+          />
+        </div>
+   <button (click)="login()">
+  Entrar
+  </button>
+
+      </form>
+
+      <p class="register">
+        Não tem uma conta?
+       <a routerLink="/cadastro">Cadastre-se</a>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
