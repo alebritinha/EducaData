@@ -9,7 +9,7 @@ import { PerfilComponent } from './pages/perfil/perfil';
 import { QuestionariosComponent } from './pages/questionarios/questionarios';
 import { CriarQuestionarioComponent } from './pages/criar-questionario/criar-questionario';
 import { IndicadoresComponent } from './pages/indicadores/indicadores';
-
+import { RelatoriosComponent } from './pages/relatorios/relatorios';
 export const routes: Routes = [
 
   {
@@ -51,6 +51,9 @@ export const routes: Routes = [
   {
     path: 'indicadores',
     component: IndicadoresComponent
+  },
+  { 
+    path: 'relatorios', 
+    component: RelatoriosComponent 
   }
-
 ];
