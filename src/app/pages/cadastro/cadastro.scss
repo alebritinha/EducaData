@@ -1,0 +1,263 @@
+/* cadastro.component.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* REMOVE ROLAGEM */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* COMPONENTE ANGULAR */
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.page-container {
+
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #f5f6fa;
+}
+
+/* LEFT SIDE */
+
+.left-side {
+
+  width: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f3f4f7;
+
+  overflow: hidden;
+}
+
+/* LOGO */
+
+.logo-content {
+
+  text-align: center;
+}
+
+/* IMAGEM */
+
+.logo-image {
+
+  width: 150px;
+
+  margin-bottom: 18px;
+}
+
+/* TÍTULO */
+
+.logo-title {
+
+  font-size: 52px;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+/* CORES */
+
+.blue {
+
+  color: #1565d8;
+}
+
+.green {
+
+  color: #58b947;
+}
+
+/* SUBTITLE */
+
+.logo-subtitle {
+
+  margin-top: 10px;
+
+  color: #7c8494;
+
+  font-size: 20px;
+}
+
+/* RIGHT SIDE */
+
+.right-side {
+
+  width: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  overflow: hidden;
+}
+
+/* FORM CARD */
+
+.form-card {
+
+  width: 380px;
+
+  max-width: 90%;
+}
+
+/* TÍTULO FORM */
+
+.form-card h2 {
+
+  font-size: 38px;
+
+  color: #1e2a44;
+
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+
+.subtitle {
+
+  color: #7d8597;
+
+  margin-bottom: 28px;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+/* INPUT GROUP */
+
+.input-group {
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+/* ÍCONE */
+
+.input-icon {
+
+  color: #7d8597;
+
+  font-size: 18px;
+
+  margin-right: 12px;
+}
+
+/* INPUT */
+
+input {
+
+  width: 100%;
+
+  height: 54px;
+
+  border: 1px solid #d8dee9;
+
+  border-radius: 12px;
+
+  padding: 0 18px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+/* INPUT FOCUS */
+
+input:focus {
+
+  border-color: #2f66e8;
+
+  box-shadow: 0 0 0 3px rgba(47, 102, 232, 0.1);
+}
+
+/* BOTÃO */
+
+button {
+
+  width: 100%;
+
+  height: 54px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #2f66e8;
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  margin-top: 12px;
+
+  transition: 0.3s;
+}
+
+/* HOVER */
+
+button:hover {
+
+  background: #1f56d8;
+}
+
+/* LOGIN LINK */
+
+.login-link {
+
+  margin-top: 22px;
+
+  text-align: center;
+
+  color: #7d8597;
+
+  font-size: 16px;
+}
+
+/* LINK */
+
+.login-link a {
+
+  color: #2f66e8;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
