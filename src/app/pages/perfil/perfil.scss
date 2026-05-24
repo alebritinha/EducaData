@@ -1,0 +1,386 @@
+/* perfil.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #f5f6fa;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+
+  background: #1565d8;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px 15px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* MENU */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu .active {
+  background: #2f66e8;
+}
+
+/* LOGOUT */
+
+.logout a {
+  color: white;
+  text-decoration: none;
+}
+
+/* CONTENT */
+
+.content {
+  flex: 1;
+
+  background: white;
+
+  padding: 35px 40px;
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  overflow-y: auto;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 40px;
+  color: #1e2a44;
+}
+
+.header p {
+  margin-top: 8px;
+
+  color: #7d8597;
+
+  font-size: 18px;
+}
+
+/* ICONES */
+
+.header-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #eef2f8;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: 0.3s;
+}
+
+.icon-btn:hover {
+  background: #dde5f3;
+}
+
+/* GRID */
+
+.perfil-grid {
+  display: grid;
+
+  grid-template-columns: 420px 1fr;
+
+  gap: 30px;
+}
+
+/* FOTO CARD */
+
+.foto-card {
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+/* AREA FOTO */
+
+.foto-area {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+/* FOTO PREVIEW */
+
+.foto-preview {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 4px solid #e5e7eb;
+}
+
+/* FOTO PADRÃO */
+
+.foto-avatar {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: #dbe1ea;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 50px;
+
+  border: 4px solid #e5e7eb;
+}
+
+/* TITULO FOTO */
+
+.foto-card h2 {
+  font-size: 32px;
+  color: #1e2a44;
+
+  margin-bottom: 10px;
+}
+
+/* EMAIL FOTO */
+
+.foto-card p {
+  color: #7d8597;
+
+  margin-bottom: 25px;
+
+  font-size: 16px;
+}
+
+/* BOTÃO FOTO */
+
+.foto-btn {
+  width: 160px;
+  height: 48px;
+
+  border: 1px solid #d8dee9;
+  border-radius: 12px;
+
+  background: white;
+
+  color: #5b6b88;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.foto-btn:hover {
+  background: #f3f4f7;
+}
+
+/* FORM */
+
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+/* CAMPO */
+
+.campo {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+/* LABEL */
+
+.campo label {
+  width: 170px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #5b6b88;
+}
+
+/* INPUT */
+
+.campo input {
+  width: 420px;
+  max-width: 100%;
+
+  height: 56px;
+
+  border: 1px solid #d8dee9;
+  border-radius: 12px;
+
+  padding: 0 18px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.campo input:focus {
+  border-color: #2f66e8;
+
+  box-shadow: 0 0 0 3px rgba(47, 102, 232, 0.1);
+}
+
+/* BOTÃO SENHA */
+
+.senha-btn {
+  width: 180px;
+  height: 50px;
+
+  border: 1px solid #d8dee9;
+  border-radius: 12px;
+
+  background: white;
+
+  color: #5b6b88;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.senha-btn:hover {
+  background: #f3f4f7;
+}
+
+/* FOOTER */
+
+.footer-btn {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 80px;
+}
+
+/* BOTÃO SALVAR */
+
+.salvar-btn {
+  width: 220px;
+  height: 58px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #2f66e8;
+  color: white;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.salvar-btn:hover {
+  background: #1f56d8;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+
+  .perfil-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .campo input {
+    width: 100%;
+  }
+
+  .footer-btn {
+    justify-content: center;
+  }
+}

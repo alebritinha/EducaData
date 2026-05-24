@@ -5,6 +5,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro';
 import { HomeComponent } from './pages/home/home';
 import { MateriaisComponent } from './pages/materiais/materiais';
 import { DetalhesMaterialComponent } from './pages/detalhes-material/detalhes-material';
+import { PerfilComponent } from './pages/perfil/perfil';
 
 
 export const routes: Routes = [
@@ -31,6 +32,11 @@ export const routes: Routes = [
   {
     path: 'material/:id',
     component: DetalhesMaterialComponent
+  },
+
+  {
+    path: 'perfil',
+    component: PerfilComponent
   }
 
 ];
