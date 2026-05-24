@@ -1,0 +1,383 @@
+/* detalhes-material.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* REMOVE SCROLL */
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.dashboard-container {
+
+  display: flex;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #f5f6fa;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+
+  width: 240px;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #0f4aa3;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px 15px;
+}
+
+/* LOGO */
+
+.logo {
+
+  font-size: 32px;
+  font-weight: 700;
+
+  margin-bottom: 40px;
+}
+
+/* MENU */
+
+.menu {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.menu a {
+
+  text-decoration: none;
+
+  color: white;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu .active {
+
+  background: #2f66e8;
+}
+
+/* LOGOUT */
+
+.logout {
+
+  margin-top: auto;
+
+  padding: 14px;
+
+  font-size: 16px;
+}
+
+/* CONTENT */
+
+.content {
+
+  flex: 1;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+  padding: 35px 45px;
+
+  background: #ffffff;
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+/* TOPO */
+
+.topo {
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 35px;
+}
+
+/* BOTÃO VOLTAR */
+
+.voltar {
+
+  width: 46px;
+  height: 46px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #eef2f8;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.voltar:hover {
+
+  background: #dde5f3;
+}
+
+/* TÍTULO */
+
+.topo h1 {
+
+  font-size: 34px;
+  font-weight: 700;
+
+  color: #1e2a44;
+}
+
+/* CARD MATERIAL */
+
+.material-card {
+
+  display: flex;
+
+  gap: 28px;
+
+  align-items: flex-start;
+
+  margin-bottom: 35px;
+}
+
+/* ÍCONE PDF */
+
+.arquivo-icon {
+
+  width: 110px;
+  height: 140px;
+
+  background: #2f3c55;
+  color: white;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* INFO */
+
+.info h2 {
+
+  font-size: 34px;
+  font-weight: 700;
+
+  color: #1e2a44;
+
+  margin-bottom: 12px;
+}
+
+/* BADGE */
+
+.badge {
+
+  display: inline-block;
+
+  background: #d8f5df;
+  color: #2f7a4f;
+
+  padding: 6px 12px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 18px;
+}
+
+/* TEXTOS */
+
+.info p {
+
+  color: #7d8597;
+
+  margin-bottom: 10px;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+.info strong {
+
+  color: #1e2a44;
+}
+
+/* DESCRIÇÃO */
+
+.descricao {
+
+  margin-top: 18px;
+}
+
+/* BOTÕES */
+
+.acoes-material {
+
+  display: flex;
+
+  gap: 16px;
+
+  margin-top: 30px;
+}
+
+/* BOTÕES */
+
+.abrir-btn,
+.baixar-btn {
+
+  width: 160px;
+  height: 50px;
+
+  border-radius: 12px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* ABRIR */
+
+.abrir-btn {
+
+  border: none;
+
+  background: #2f66e8;
+  color: white;
+}
+
+.abrir-btn:hover {
+
+  background: #1f56d8;
+}
+
+/* BAIXAR */
+
+.baixar-btn {
+
+  border: 1px solid #d8dee9;
+
+  background: white;
+
+  color: #1e2a44;
+}
+
+.baixar-btn:hover {
+
+  background: #f3f4f7;
+}
+
+/* ESTATÍSTICAS */
+
+.estatisticas {
+
+  margin-top: 40px;
+}
+
+/* TÍTULO ESTATÍSTICAS */
+
+.estatisticas h2 {
+
+  font-size: 28px;
+  font-weight: 700;
+
+  color: #1e2a44;
+
+  margin-bottom: 22px;
+}
+
+/* CARDS */
+
+.cards {
+
+  display: flex;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+/* CARD */
+
+.card {
+
+  width: 210px;
+
+  background: white;
+
+  border: 1px solid #edf0f5;
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* TEXTO */
+
+.card p {
+
+  color: #7d8597;
+
+  font-size: 15px;
+
+  margin-bottom: 12px;
+}
+
+/* NÚMERO */
+
+.card h3 {
+
+  font-size: 38px;
+  font-weight: 700;
+
+  color: #1e2a44;
+}
