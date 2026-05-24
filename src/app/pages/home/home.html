@@ -1,0 +1,284 @@
+<!-- home.html -->
+
+<div class="dashboard-container">
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <!-- TOPO SIDEBAR -->
+
+    <div>
+
+      <div class="sidebar-top">
+
+        <div class="logo-area">
+
+          <div class="logo-icon">
+          </div>
+
+          <div class="logo">
+            EducaData
+          </div>
+
+        </div>
+
+        <button class="menu-btn">
+          
+        </button>
+
+      </div>
+
+      <!-- MENU -->
+
+      <nav class="menu">
+
+        <!-- HOME -->
+
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          🏠 Home
+        </a>
+
+        <!-- MATERIAIS -->
+
+        <a
+          routerLink="/materiais"
+          routerLinkActive="active"
+        >
+          📚 Materiais
+        </a>
+
+        <!-- QUESTIONÁRIOS -->
+
+        <a
+          routerLink="/questionarios"
+          routerLinkActive="active"
+        >
+          📝 Questionários
+        </a>
+
+        <!-- INDICADORES -->
+
+        <a
+          routerLink="/indicadores"
+          routerLinkActive="active"
+        >
+          📊 Indicadores
+        </a>
+
+        <!-- RELATÓRIOS -->
+
+        <a
+          routerLink="/relatorios"
+          routerLinkActive="active"
+        >
+          📄 Relatórios
+        </a>
+
+        <!-- PERFIL -->
+
+        <a
+          routerLink="/perfil"
+          routerLinkActive="active"
+        >
+          👤 Perfil
+        </a>
+
+      </nav>
+
+    </div>
+
+    <!-- LOGOUT -->
+
+    <div class="logout">
+
+      <a routerLink="/">
+        Sair
+      </a>
+
+    </div>
+
+  </aside>
+
+  <!-- CONTENT -->
+
+  <main class="content">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div>
+
+        <h1>
+          Olá, Professora Mariana!
+        </h1>
+
+        <p>
+          Veja o resumo das suas atividades.
+        </p>
+
+      </div>
+
+      <!-- FOTO PERFIL -->
+
+      <div class="perfil-mini"></div>
+
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="cards-grid">
+
+      <div class="card">
+
+        <p>
+          Materiais
+        </p>
+
+        <h2>
+          58
+        </h2>
+
+      </div>
+
+      <div class="card">
+
+        <p>
+          Questionários
+        </p>
+
+        <h2>
+          12
+        </h2>
+
+      </div>
+
+      <div class="card">
+
+        <p>
+          Respostas
+        </p>
+
+        <h2>
+          342
+        </h2>
+
+      </div>
+
+      <div class="card">
+
+        <p>
+          Média de Compreensão
+        </p>
+
+        <h2>
+          85%
+        </h2>
+
+      </div>
+
+    </div>
+
+    <!-- GRÁFICOS -->
+
+    <div class="graficos-grid">
+
+      <!-- GRÁFICO LINHA -->
+
+      <div class="grafico-box">
+
+        <h2>
+          Desempenho da Turma
+        </h2>
+
+        <div class="grafico-linha">
+
+          <svg
+            width="100%"
+            height="240"
+            viewBox="0 0 500 240"
+          >
+
+            <!-- LINHA -->
+
+            <polyline
+              fill="none"
+              stroke="#2f66e8"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              points="
+                20,190
+                80,140
+                140,160
+                210,80
+                270,110
+                330,20
+                390,50
+                450,10
+              "
+            />
+
+            <!-- PONTOS -->
+
+            <circle cx="20" cy="190" r="5" fill="#2f66e8"></circle>
+            <circle cx="80" cy="140" r="5" fill="#2f66e8"></circle>
+            <circle cx="140" cy="160" r="5" fill="#2f66e8"></circle>
+            <circle cx="210" cy="80" r="5" fill="#2f66e8"></circle>
+            <circle cx="270" cy="110" r="5" fill="#2f66e8"></circle>
+            <circle cx="330" cy="20" r="5" fill="#2f66e8"></circle>
+            <circle cx="390" cy="50" r="5" fill="#2f66e8"></circle>
+            <circle cx="450" cy="10" r="6" fill="#2f66e8"></circle>
+
+          </svg>
+
+        </div>
+
+      </div>
+
+      <!-- PARTICIPAÇÃO -->
+
+      <div class="grafico-box pequeno">
+
+        <h2>
+          Participação
+        </h2>
+
+        <div class="participacao-area">
+
+          <!-- CÍRCULO -->
+
+          <div class="circulo">
+
+            <div class="circulo-interno"></div>
+
+          </div>
+
+          <!-- TEXTO -->
+
+          <div class="participacao-info">
+
+            <h3>
+              92%
+            </h3>
+
+            <p>
+              Participação média
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
