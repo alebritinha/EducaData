@@ -1,0 +1,118 @@
+<div class="page-container">
+
+  <!-- Lado esquerdo -->
+  <section class="left-side">
+
+    <div class="logo-content">
+
+      <img src="assets/logo_educadata.png" alt="EducaData Logo" />
+
+      <h1 class="logo-title">
+        <span class="blue">Educa</span><span class="green">Data</span>
+      </h1>
+
+      <p class="logo-subtitle">
+        — Gestão Pedagógica —
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Lado direito -->
+  <section class="right-side">
+
+    <div class="form-card">
+
+      <h2>Crie sua conta</h2>
+
+      <p class="subtitle">Cadastro de Professor(a)</p>
+
+      <form (ngSubmit)="cadastrar()">
+
+        <!-- Nome -->
+        <div class="input-group">
+
+          <div class="input-icon">
+            <i class="fa-regular fa-user"></i>
+          </div>
+
+          <input
+            type="text"
+            placeholder="Nome completo"
+            name="nome"
+            [(ngModel)]="professora.nome"
+            required
+          />
+
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+
+          <div class="input-icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+
+          <input
+            type="email"
+            placeholder="E-mail"
+            name="email"
+            [(ngModel)]="professora.email"
+            required
+          />
+
+        </div>
+
+        <!-- Senha -->
+        <div class="input-group">
+
+          <div class="input-icon">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+
+          <input
+            type="password"
+            placeholder="Senha"
+            name="senha"
+            [(ngModel)]="professora.senha"
+            required
+          />
+
+        </div>
+
+        <!-- Confirmar Senha -->
+        <div class="input-group">
+
+          <div class="input-icon">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+
+          <input
+            type="password"
+            placeholder="Confirmar senha"
+            name="confirmarSenha"
+            [(ngModel)]="professora.confirmarSenha"
+            required
+          />
+
+        </div>
+
+        <!-- Botão -->
+        <button type="submit">
+          Cadastrar
+        </button>
+
+      </form>
+
+      <p class="login-link">
+        Já possui conta?
+        <a routerLink="/">Entrar</a>
+        
+      </p>
+
+    </div>
+
+  </section>
+
+</div>
